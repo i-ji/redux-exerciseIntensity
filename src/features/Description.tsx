@@ -7,13 +7,11 @@ import {
 
 const Description = () => {
   return (
-    <div>
+    <>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
-          {/* <AccordionTrigger className="text-xs sm:text-sm md:text-base py-3 sm:py-[14px] md:py-4"> */}
           <AccordionTrigger>カルボーネン法とは？</AccordionTrigger>
           <AccordionContent>
-            {/* <p className="text-[10px] sm:text-xs md:text-sm"> */}
             <p>
               <span className="font-bold">
                 年齢や安静時心拍数から運動強度を算出する計算式
@@ -26,7 +24,6 @@ const Description = () => {
 
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
-          {/* <AccordionTrigger className="text-xs sm:text-sm md:text-base py-3 sm:py-[14px] md:py-4"> */}
           <AccordionTrigger>カルボーネン法の計算式</AccordionTrigger>
           <AccordionContent className=" space-y-1">
             <p className="font-bold mb-2">
@@ -43,7 +40,7 @@ const Description = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-    </div>
+    </>
   );
 };
 export default Description;

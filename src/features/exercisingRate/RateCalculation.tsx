@@ -1,23 +1,18 @@
-import CardItem from "../parts/CardItem";
+import CardItem from "../../components/parts/CardItem";
 
 interface RateCalculation {
   exerciseIntensity: string;
   inputExerciseIntensity: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onSubmitHandler: (e: React.FormEvent<HTMLFormElement>) => void;
-  age: string;
-  rastingRate: string;
+  exerciseRateCalculate: (e: React.FormEvent<HTMLFormElement>) => void;
   result: string;
 }
 
 const RateCalculation = ({
   exerciseIntensity,
   inputExerciseIntensity,
-  onSubmitHandler,
-  age,
-  rastingRate,
+  exerciseRateCalculate,
   result,
 }: RateCalculation) => {
-  const RateCalculationLabel = "運動強度";
   return (
     <CardItem
       cardTitle="運動時心拍数の算出"
@@ -26,11 +21,10 @@ const RateCalculation = ({
       placeholder="運動強度を入力してください"
       value={exerciseIntensity}
       onChangeHandler={inputExerciseIntensity}
-      onSubmitHandler={onSubmitHandler}
-      hiddenAge={age}
-      hiddenRastingRate={rastingRate}
+      onSubmitHandler={exerciseRateCalculate}
       result={result}
-      label={RateCalculationLabel}
+      label="運動強度"
+      name="exerciseIntensity"
     />
   );
 };

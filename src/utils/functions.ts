@@ -4,10 +4,10 @@ export const exercisingRateHandler = (
   age: string,
   rastingRate: string
 ) => {
-  return String(
+  return (
     (Number(exerciseIntensity) / 100) *
       (220 - Number(age) - Number(rastingRate)) +
-      Number(rastingRate)
+    Number(rastingRate)
   );
 };
 
@@ -17,10 +17,10 @@ export const exerciseIntensityHandler = (
   age: string,
   rastingRate: string
 ) => {
-  return String(
+  return (
     ((Number(exercisingRate) - Number(rastingRate)) /
       (220 - Number(age) - Number(rastingRate))) *
-      100
+    100
   );
 };
 
@@ -41,3 +41,6 @@ export const rastingRateValidate = (rastingRate: string) => {
 
   return true;
 };
+
+// 運動強度一覧
+export const exercisingLevels = ["50", "60", "70", "80", "90", "100"];
